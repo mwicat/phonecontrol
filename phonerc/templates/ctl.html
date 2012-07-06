@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>  
+<script type="text/javascript">
+function click(url) {
+$.get(url, function(data) {
+d = new Date();
+$("#myimg").attr("src", "{{ screenshot_url }}?"+d.getTime());
+});
+}
+</script>
+
+<img id="myimg" src="{{ screenshot_url }}" width="319" height="232" />
+
+<ul id="navigation">
+  {% for item in navigation %}
+
+  <li><a href="javascript:click('{{ item.href }}');">{{ item.caption }}</a></li>
+  {% endfor %}
+</ul>
+
+
+</html>
+

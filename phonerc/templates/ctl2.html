@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>  
+<script type="text/javascript">
+function click(url) {
+$.get(url, function(data) {
+d = new Date();
+$("#myimg").attr("src", "{{ screenshot_url }}?"+d.getTime());
+});
+}
+</script>
+
+<div>
+<img style="position: absolute; left: 0; top: 0" id="softphone"
+     src="/static/softphone.png" usemap ="#planetmap" />
+<img style="position: absolute; left: 84px; top: 82px" id="myimg" src="{{ screenshot_url }}" width="319" height="232" />
+</div>
+
+<map name="planetmap">
+  <area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun" />
+</map> 
+
+<ul id="navigation">
+  {% for item in navigation %}
+  <li><a href="javascript:click('{{ item.href }}');">{{ item.caption }}</a></li>
+  {% endfor %}
+</ul>
+
+
+</html>
+

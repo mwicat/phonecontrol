@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+
+  {% for ip in ips %}
+  <div style="float:left; width:180px;height:150px">
+<p><a href="{{ url_for('.ctl', ip=ip) }}">{{ ip }}</a></p>
+<a href="{{ url_for('.ctl', ip=ip) }}"><img src="{{
+  url_for('.screenshot', ip=ip) }}" width="160" height="100"
+  /></a></div>
+  {% endfor %}
+
+
+</html>
+
