@@ -1,6 +1,6 @@
 ## Description
 
-TODO
+This web application allows you to remote control Cisco phones spread on LAN. It utilises HTTP server present on phone to send proper commands.
 
 ## Requirements
 
@@ -20,5 +20,5 @@ sudo setup.py install
 
 ## Screenhosts
 
-![Phones view](https://github.com/downloads/mwicat/cisco_rc/phones.png)
-![Phone controller](https://github.com/downloads/mwicat/cisco_rc/phones2.png)
+![Phones view](https://github.com/downloads/mwicat/phonecontrol/phones.png)
+![Phone controller](https://github.com/downloads/mwicat/phonecontrol/phones2.png)
