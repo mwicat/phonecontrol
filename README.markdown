@@ -1,6 +1,6 @@
 ## Description
 
-This web application allows you to remote control Cisco phones spread on LAN. It utilises HTTP server present on phone to send proper commands.
+This web application allows you to remotely control Cisco phones spread on LAN. It utilises HTTP server present on phone to send proper commands.
 
 ## Requirements
 
